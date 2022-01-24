@@ -13,9 +13,9 @@ defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 /* the next statment means if TEMPLATE_FRONT is already defined set it to null 
    else define it as template/front 
    AND THE SAME GOES TO THE OTHER STATMENTS */
-defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "template/front");
+defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
 
-defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "template/back");
+defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
 
 
 defined("DB_HOST") ? null : define("DB_HOST", "localhost");
