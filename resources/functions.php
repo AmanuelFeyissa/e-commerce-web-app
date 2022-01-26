@@ -1,5 +1,6 @@
 <?php
 
+// helper functions
 // a function to redirect
 function redirect($location){
 
@@ -31,6 +32,20 @@ function escape_string($string) {
 function fetch_array($result) {
 
     return mysqli_fetch_array($result);
+}
+
+
+// get products 
+
+function get_products() {
+
+    $query = query(" SELECT * FROM PRODUCTS");
+    confirm($query);
+
+    while($row = fetch_array($query)) {
+
+        echo $row['product_price'];
+    }
 }
 
 ?>
