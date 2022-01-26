@@ -43,7 +43,7 @@ function get_products() {
     confirm($query);
 
     while($row = fetch_array($query)) {
-
+        // Creating a herodoc
         $product = <<< DELIMETER
         <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
