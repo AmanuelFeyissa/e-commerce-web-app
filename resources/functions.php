@@ -121,6 +121,35 @@ function get_products_in_cat_page() {
 
 
 
+function get_products_in_shop_page() {
+
+    $query = query(" SELECT * FROM products");
+    confirm($query);
+
+    while($row = fetch_array($query)) {
+        // Creating a herodoc
+        $product = <<< DELIMETER
+        <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="{$row['product_image']}" alt="">
+                    <div class="caption">
+                        <h3>{$row['product_title']}</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="item.php?id={$row['product_id']}" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        DELIMETER;
+
+        echo $product;
+    }
+}
+
+
+
 
 
 /****************************** BACK END FUNCTIONS ************************************/
