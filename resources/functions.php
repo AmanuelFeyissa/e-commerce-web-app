@@ -45,7 +45,7 @@ function fetch_array($result) {
 
 function get_products() {
 
-    $query = query(" SELECT * FROM PRODUCTS");
+    $query = query(" SELECT * FROM products");
     confirm($query);
 
     while($row = fetch_array($query)) {
