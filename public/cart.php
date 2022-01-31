@@ -47,6 +47,31 @@
 
 
 
+    function cart() {
+
+        $query = query("SELECT * FROM products");
+        confirm($query);
+
+        while($row = fetch_array($query)) {
+
+            $product = <<< DELIMETER
+
+            <tr>
+                <td>{$row['product_title']}</td>
+                <td>{$row['product_price']}</td>
+                <td>{$row['product_quantity']}</td>
+                <td>2</td>
+                <td><a href="cart.php?remove=1">Remove</a></td>
+                <td><a href="cart.php?delete=1">Delete</a></td>
+            </tr>
+
+
+
+            DELIMETER;
+
+            echo $product;
+        }
+    }
 
 
 
