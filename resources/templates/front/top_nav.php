@@ -18,9 +18,6 @@
                     <li>
                         <a href="login.php">Login</a>
                     </li>
-                    <li>
-                        <a href="admin">Admin</a>
-                    </li>
                      <li>
                         <a href="checkout.php">Checkout</a>
                     </li>

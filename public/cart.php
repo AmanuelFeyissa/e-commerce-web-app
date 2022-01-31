@@ -49,31 +49,43 @@
 
     function cart() {
 
-        $query = query("SELECT * FROM products");
-        confirm($query);
+        foreach ($_SESSION as $name => $value ) {
 
-        while($row = fetch_array($query)) {
+            if($value > 0 ) {
 
-            $product = <<< DELIMETER
+                
+            if(substr($name, 0, 8)  == "product_") {
 
-            <tr>
-                <td>{$row['product_title']}</td>
-                <td>{$row['product_price']}</td>
-                <td>{$row['product_quantity']}</td>
-                <td>2</td>
-                <td></td>
-                <td><a class ='btn  btn-warning' href="cart.php?remove={$row['product_id']}"><span class = 'glyphicon glyphicon-minus '></span></a>  
-                    <a class = 'btn  btn-success' href="cart.php?add={$row['product_id']}"><span class = 'glyphicon glyphicon-plus '></span></a>
-                    <a class = 'btn  btn-danger' href="cart.php?delete={$row['product_id']}"><span class = 'glyphicon glyphicon-remove '></span></a>
-                </td>
-            </tr>
+                $query = query("SELECT * FROM products");
+                confirm($query);
 
+                while($row = fetch_array($query)) {
 
+                $product = <<< DELIMETER
 
-            DELIMETER;
+                    <tr>
+                        <td>{$row['product_title']}</td>
+                        <td>{$row['product_price']}</td>
+                        <td>{$row['product_quantity']}</td>
+                        <td>2</td>
+                        <td></td>
+                        <td><a class ='btn  btn-warning' href="cart.php?remove={$row['product_id']}"><span class = 'glyphicon glyphicon-minus '></span></a>  
+                            <a class = 'btn  btn-success' href="cart.php?add={$row['product_id']}"><span class = 'glyphicon glyphicon-plus '></span></a>
+                            <a class = 'btn  btn-danger' href="cart.php?delete={$row['product_id']}"><span class = 'glyphicon glyphicon-remove '></span></a>
+                        </td>
+                    </tr>
 
-            echo $product;
+                DELIMETER;
+
+                echo $product;
+                }
+                }
+
+            }
+
         }
+
+        
     }
 
 
