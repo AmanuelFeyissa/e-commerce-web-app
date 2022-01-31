@@ -5,6 +5,8 @@ ob_start();
 // sesstion is like a security feature when we wish to login and stuff
 session_start();
 
+//session_destroy();
+
 // DS means back slash or forword slash depending on which ever OS you're using
 /* the next statment means if DS is already defined set it to null 
    else define it as DIRECTORY_SEPARATOR */
