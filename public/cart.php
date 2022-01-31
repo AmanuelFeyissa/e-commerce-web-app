@@ -14,9 +14,10 @@
             if( $row['product_quantity'] != $_SESSION['product_' . $_GET['add']]) {
 
                 $_SESSION['product_' . $_GET['add']] += 1;
+                redirect("checkout.php");
             } else{
 
-                set_message("We only have" . $row['product_quantity'] . " " . "Available");
+                set_message("We only have " . $row['product_quantity'] . " " . "{$row['product_title']} " . " " . " Available");
                 redirect("checkout.php");
             }
 
