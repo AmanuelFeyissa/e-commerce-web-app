@@ -190,6 +190,32 @@ function login_user(){
 
 }
 
+function send_message(){
+
+    if(isset($_POST['submit'])){
+        
+        $to         = "amanuelfeyissa45@gmail.com";
+        $from_name  = $_POST['name'];
+        $subject    = $_POST['subject'];
+        $email      = $_POST['email'];
+        $message    = $_POST['message'];
+
+        $headers = "From: {$from_name} {$email}";
+
+        $result = mail($to, $subject, $message, $headers);
+
+        if(!$result) {
+
+            set_message("Sorry we can not send your message");
+            redirect("contact.php");
+        } else {
+
+            set_message("Your message has been sent");
+        }
+    }
+
+}
+
 
 
 /****************************** BACK END FUNCTIONS ************************************/
