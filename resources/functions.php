@@ -3,9 +3,6 @@
 // helper functions
 
 
-
-/****************************** FRONT END FUNCTIONS ************************************/
-
 function set_message($msg){
 
     if (!empty($msg)) {
