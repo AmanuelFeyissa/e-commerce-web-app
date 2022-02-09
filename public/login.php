@@ -10,7 +10,7 @@
             <h2 class="text-center bg-warning"><?php display_message(); ?></h2>
         <div class="col-sm-4 col-sm-offset-5">         
             <form class="" action="" method="post" enctype="multipart/form-data">
-
+                <!-- Login function -->
                 <?php login_user(); ?>
 
                 <div class="form-group"><label for="">
