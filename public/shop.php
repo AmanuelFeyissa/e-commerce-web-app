@@ -5,7 +5,6 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Jumbotron Header -->
         <header>
             <h1>Shop</h1>
         </header>
