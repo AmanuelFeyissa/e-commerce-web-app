@@ -46,7 +46,7 @@
     }
 
 
-
+    // function to manage the cart section
     function cart() {
 
         foreach ($_SESSION as $name => $value ) {
