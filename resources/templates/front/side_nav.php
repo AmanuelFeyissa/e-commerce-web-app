@@ -3,7 +3,7 @@
     <div class="list-group">
 
         <?php
-
+            // a function to get the categories
             get_categories();
 
         ?>
