@@ -5,7 +5,6 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
             <h1>A Warm Welcome!</h1>
             </p>
