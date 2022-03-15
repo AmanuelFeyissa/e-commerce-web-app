@@ -1,6 +1,7 @@
 <?php
 
 // helper functions
+//To make it more dynamic
 
 
 function set_message($msg){
